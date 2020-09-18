@@ -22,7 +22,7 @@ export default {
   methods: {
     async showInfo() {
       this.lists = [];
-      let item = await axios.get(`http://api.ekispert.jp/v1/json/station?key=LE_zmTrsNKamrkQm&name=${this.stationName}`);
+      let item = await axios.get(`//api.ekispert.jp/v1/json/station?key=LE_zmTrsNKamrkQm&name=${this.stationName}`);
       for (let i=0;i < item.data.ResultSet.Point.length;i++) {
         this.lists.push(item.data.ResultSet.Point[i].Station.Name);
       }
